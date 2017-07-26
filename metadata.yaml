@@ -1,0 +1,22 @@
+name: reverseproxy
+summary: Implements the reverseproxy interface
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+description: |
+  This charm implements the interface reverseproxy so that charms that do not support the interface can be related
+  without modifying the original charm.
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - misc
+subordinate: false
+series:
+  - xenial
+#provides:
+#  provides-relation:
+#    interface: interface-name
+requires:
+  reverseproxy:
+    interface: reverseproxy
+#peers:
+#  peer-relation:
+#    interface: interface-name
