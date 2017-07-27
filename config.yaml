@@ -1,5 +1,29 @@
 options:
-
+  mode:
+    type: string
+    default: "http"
+    description: "Use of http or tcp for reverseproxy"
+  urlbase:
+    type: string
+    default: ""
+    description: "Url for redirect in http mode, must include leading /"
+  subdomain:
+    type: string
+    default: ""
+    description: "Subdomain for redirect in http mode"
+  group-id:
+    type: string
+    default: ""
+    description: "Optional group id setting from reverseproxy interface"
+  external-port:
+    type: int
+    default: 80
+    description: "The external port the provider will listen on"
+  internal-port:
+    type: int
+    default: 80
+    description: "The internal port on the this host to redirect to"
+    
 # Example options
 #  string-option:
 #    type: string

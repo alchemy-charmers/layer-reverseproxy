@@ -1,6 +1,7 @@
 from charms.reactive import when, when_all, when_not, set_state
 from charmhelpers.core import hookenv
 
+import socket
 
 @when_not('reverseproxy-charm.installed')
 @when('layer-hostname.installed')
