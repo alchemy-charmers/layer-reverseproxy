@@ -22,7 +22,7 @@ options:
   internal-port:
     type: int
     default: 80
-    description: "The internal port on the this host to redirect to"
+    description: "The internal port on the host to redirect to"
     
 # Example options
 #  string-option:
