@@ -23,7 +23,14 @@ options:
     type: int
     default: 80
     description: "The internal port on the host to redirect to"
-    
+  rewrite-path:
+    type: boolean
+    default: False
+    description: "Remove urlbase on redirect"
+  acl-local:
+    type: boolean
+    default: False
+    description: "Restrict the backend to private subnets"
 # Example options
 #  string-option:
 #    type: string

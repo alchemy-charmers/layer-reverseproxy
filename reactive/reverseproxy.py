@@ -22,8 +22,10 @@ def configure_reverseproxy(reverseproxy, *args):
                   'group_id': charm_config['group-id'],
                   'external_port': charm_config['external-port'],
                   'internal_host': socket.getfqdn(),
-                  'internal_port': charm_config['internal-port']
-                  } 
+                  'internal_port': charm_config['internal-port'],
+                  'rewrite-path': charm_config['rewrite-path'],
+                  'acl-local': charm_config['acl-local'],
+                  }
     reverseproxy.configure(proxy_info)
     hookenv.status_set('active', '')
 
