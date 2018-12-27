@@ -25,6 +25,9 @@ def configure_reverseproxy(reverseproxy, *args):
                   'internal_port': charm_config['internal-port'],
                   'rewrite-path': charm_config['rewrite-path'],
                   'acl-local': charm_config['acl-local'],
+                  'proxypass': charm_config['proxypass'],
+                  'ssl': charm_config['ssl'],
+                  'ssl-verify': charm_config['ssl-verify'],
                   }
     reverseproxy.configure(proxy_info)
     hookenv.status_set('active', '')
